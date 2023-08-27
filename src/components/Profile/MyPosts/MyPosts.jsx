@@ -11,10 +11,8 @@ const MyPosts = () => {
         <button>Remove</button>
       </div>
       <div className={modules.posts}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post message="It's my first project" likesCount="15" />
+        <Post message="So don't blame me" likesCount="20" />
       </div>
     </div>
   );
