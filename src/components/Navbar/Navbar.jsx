@@ -9,9 +9,15 @@ const Navbar = () => {
       <div className={modules.item}>
         <a href="/dialogs">Messages</a>
       </div>
-      <div className={modules.item}>News</div>
-      <div className={modules.item}>Music</div>
-      <div className={modules.item}>Settings</div>
+      <div className={modules.item}>
+        <a href="/dialogs">News</a>
+      </div>
+      <div className={modules.item}>
+        <a href="/dialogs">Music</a>
+      </div>
+      <div className={modules.item}>
+        <a href="/dialogs">Settings</a>
+      </div>
     </nav>
   );
 };
