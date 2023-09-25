@@ -2,10 +2,14 @@ import modules from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = () => {
-  let postsData = [
+  let posts = [
     { id: 1, message: "It's my first project", likesCount: "15" },
     { id: 2, message: "So don't blame me", likesCount: "20" },
   ];
+
+  let postsElements = posts.map((post) => (
+    <Post message={post.message} likesCount={post.likesCount} />
+  ));
 
   return (
     <div className={modules.postsBlock}>
@@ -19,16 +23,7 @@ const MyPosts = () => {
           <button>Remove</button>
         </div>
       </div>
-      <div className={modules.posts}>
-        <Post
-          message={postsData[0].message}
-          likesCount={postsData[0].likesCount}
-        />
-        <Post
-          message={postsData[1].message}
-          likesCount={postsData[1].likesCount}
-        />
-      </div>
+      <div className={modules.posts}>{postsElements}</div>
     </div>
   );
 };
